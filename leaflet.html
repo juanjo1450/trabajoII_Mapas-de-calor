@@ -1,28 +1,56 @@
 <!DOCTYPE html>
-<html>
-<head>
-<script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />>
-<style>
+<!-- saved from url=(0054)https://mappinggis.com/visores_webmapping/leaflet.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<script type="text/javascript" src="geo_cantones.js"></script>
+L.geoJson(geo_cantones).addTo(map);
+	<link rel="stylesheet" href="./leaflet_files/leaflet.css">
+
+ <style>
   #map { 
-    width: 100%;
-    height: 580px;
-    box-shadow: 5px 5px 5px #888;
- }
-</style>
-<body>
-<div id="map"></div>
-<script>
-  var map = L.map('map').
-     setView([41.66, -4.72],
-     15);
-</script>
+  widh: 50px;
+  height: 600px; }
+ </style>
+function getColor(d) {
+return d > 100000000 ? '#800026' : 
+d > 50000000 ? '#BD0026' : 
+d > 20000000 ? '#E31A1C' : 
+d > 10000000 ? '#FC4E2A' : 
+d > 5000000 ? '#FD8D3C' : 
+d > 2000000 ? '#FEB24C' : 
+d > 1000000 ? '#FED976' : 
+'#FFEDA0'; 
+}
+function style(feature) { 
+return { 
+fillColor: getColor(
+feature.properties.POP_EST), 
+weight: 2, 
+opacity: 1, 
+color: 'white', 
+dashArray: '3', 
+fillOpacity: 0.7 
+}; 
+}
+L.geoJson(geo_cantones, { style: style }).addTo(map);
+ 
+ </head>
+  <body class="">
+   <div id="map" class="leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0" style="position: relative; outline: none;"><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(1119.4px, -534.2px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 17; transform: translate3d(0px, 0px, 0px) scale(0.5);"></div><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 18; transform: translate3d(-94px, 423px, 0px) scale(1);"><img alt="" role="presentation" src="./leaflet_files/120.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-382px, 134px, 0px); opacity: 1;"><img alt="" role="presentation" src="./leaflet_files/120(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-126px, 134px, 0px); opacity: 1;"><img alt="" role="presentation" src="./leaflet_files/121.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-382px, 390px, 0px); opacity: 1;"><img alt="" role="presentation" src="./leaflet_files/121(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-126px, 390px, 0px); opacity: 1;"><img alt="" role="presentation" src="./leaflet_files/120(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-638px, 134px, 0px); opacity: 1;"><img alt="" role="presentation" src="./leaflet_files/120(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(130px, 134px, 0px); opacity: 1;"><img alt="" role="presentation" src="./leaflet_files/121(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-638px, 390px, 0px); opacity: 1;"><img alt="" role="presentation" src="./leaflet_files/121(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(130px, 390px, 0px); opacity: 1;"><img alt="" role="presentation" src="./leaflet_files/122.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-382px, 646px, 0px); opacity: 1;"><img alt="" role="presentation" src="./leaflet_files/122(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-638px, 646px, 0px); opacity: 1;"><img alt="" role="presentation" src="./leaflet_files/122(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-126px, 646px, 0px); opacity: 1;"><img alt="" role="presentation" src="./leaflet_files/121(4).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-894px, 390px, 0px); opacity: 1;"><img alt="" role="presentation" src="./leaflet_files/120(4).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-894px, 134px, 0px); opacity: 1;"><img alt="" role="presentation" src="./leaflet_files/122(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-894px, 646px, 0px); opacity: 1;"><img alt="" role="presentation" src="./leaflet_files/122(4).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(130px, 646px, 0px); opacity: 1;"><img alt="" role="presentation" src="./leaflet_files/121(5).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-1150px, 390px, 0px); opacity: 1;"><img alt="" role="presentation" src="./leaflet_files/121(6).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(386px, 390px, 0px); opacity: 1;"><img alt="" role="presentation" src="./leaflet_files/120(5).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-1150px, 134px, 0px); opacity: 1;"><img alt="" role="presentation" src="./leaflet_files/120(6).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(386px, 134px, 0px); opacity: 1;"><img alt="" role="presentation" src="./leaflet_files/122(5).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-1150px, 646px, 0px); opacity: 1;"><img alt="" role="presentation" src="./leaflet_files/122(6).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(386px, 646px, 0px); opacity: 1;"><img alt="" role="presentation" src="./leaflet_files/119.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-382px, -122px, 0px); opacity: 1;"><img alt="" role="presentation" src="./leaflet_files/119(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-638px, -122px, 0px); opacity: 1;"><img alt="" role="presentation" src="./leaflet_files/119(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-126px, -122px, 0px); opacity: 1;"><img alt="" role="presentation" src="./leaflet_files/119(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-894px, -122px, 0px); opacity: 1;"><img alt="" role="presentation" src="./leaflet_files/119(4).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(130px, -122px, 0px); opacity: 1;"><img alt="" role="presentation" src="./leaflet_files/119(5).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-1150px, -122px, 0px); opacity: 1;"><img alt="" role="presentation" src="./leaflet_files/119(6).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(386px, -122px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-shadow-pane"><img src="./leaflet_files/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(-395px, 795px, 0px);"></div><div class="leaflet-pane leaflet-overlay-pane"></div><div class="leaflet-pane leaflet-marker-pane"><img src="./leaflet_files/marker-icon-2x.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(-395px, 795px, 0px); z-index: 795;"></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(17524.6px, 30997.2px, 0px) scale(128);"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="https://mappinggis.com/visores_webmapping/leaflet.html#" title="Zoom in" role="button" aria-label="Zoom in">+</a><a class="leaflet-control-zoom-out" href="https://mappinggis.com/visores_webmapping/leaflet.html#" title="Zoom out" role="button" aria-label="Zoom out">-</a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"><div class="leaflet-control-scale leaflet-control"><div class="leaflet-control-scale-line" style="width: 83px;">50 km</div><div class="leaflet-control-scale-line" style="width: 80px;">30 mi</div></div></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="http://leafletjs.com/" title="A JS library for interactive maps">Leaflet</a> | Map data © <a href="http://openstreetmap.org/">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com/">CloudMade</a></div></div></div></div>
+ <script>
+ 
+var map = L.map('map').
+setView([41.66, -4.72], 
+14);
+ 
 L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
-maxZoom: 18
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+    maxZoom: 18
 }).addTo(map);
+
 L.control.scale().addTo(map);
-L.marker([41.66, -4.71],{draggable: true}).addTo(map);
+L.marker([41.66, -4.71], {draggable: true}).addTo(map);
+
  </script>
-</body> 
-</html>
+  
+ </body></html>
